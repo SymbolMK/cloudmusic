@@ -1,0 +1,11 @@
+<view class="wrapper">
+    <swiper class="swiper" autoplay="{{true}}" interval="3000" circular="{{true}}" indicator-dots="{{true}}">
+        <swiper-item class="" item-id="" wx:for='{{SwiperJson}}' wx:key='url'>
+            <image class="icon" src="{{item.url}}" mode="widthFix"/>
+        </swiper-item>
+          
+    </swiper>
+    <view class="playlist">
+        <playList playList='{{PlayList}}' />
+    </view>
+</view>

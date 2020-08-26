@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "searchBar": "../../components/searchBar/index",
+    "tipsModal": "../../components/tips/index",
+    "shareItem": "../../components/share/index"
+  },
+  "disableScroll": true,
+  "navigationBarTitleText": "发现你的美"
+}

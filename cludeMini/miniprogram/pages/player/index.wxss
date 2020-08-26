@@ -1,0 +1,129 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+page {
+  height: 100%;
+}
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrapper .blur {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: blur(20px);
+}
+
+.wrapper .content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.wrapper .content .header {
+  margin-top: 30rpx;
+  color: #ffffff;
+  text-align: center;
+}
+
+.wrapper .content .header .name {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 15rpx;
+}
+
+.wrapper .content .header .card {
+  font-size: 24rpx;
+}
+
+.wrapper .content .card-logo {
+  margin: 180rpx auto 0;
+  border: 90rpx solid;
+  border-radius: 50%;
+  width: 360rpx;
+  height: 360rpx;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  animation: rotate 10s linear infinite;
+}
+
+.wrapper .content .card-logo.paused {
+  animation-play-state: paused;
+}
+
+.wrapper .content .card-logo.running {
+  animation-play-state: running;
+}
+
+.wrapper .playMenu {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200rpx;
+}
+
+.wrapper .playMenu .playRange {
+  display: flex;
+  font-size: 20rpx;
+  color: rgba(255, 255, 255, 0.2);
+  align-items: center;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+  padding-bottom: 10rpx;
+}
+
+.wrapper .playMenu .playRange .range {
+  flex: 1;
+}
+
+.wrapper .playMenu .playRange .range .slider {
+  margin: 0 18px;
+}
+
+.wrapper .playMenu .playRange .currentTime {
+  width: 64rpx;
+}
+
+.wrapper .playMenu .menuList {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .playMenu .menuList .item {
+  font-size: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.wrapper .playMenu .menuList .item .iconfont {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 64rpx;
+}
+
+.wrapper .playMenu .menuList .item:nth-child(2) .iconfont {
+  transform: rotate(-180deg);
+}
+
+.wrapper .playMenu .menuList .item:nth-child(3) .iconfont {
+  font-size: 120rpx;
+}

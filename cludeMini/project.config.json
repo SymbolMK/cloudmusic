@@ -1,0 +1,100 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"enhance": true
+	},
+	"appid": "wxd97549824f7c029c",
+	"projectname": "%E5%8E%9F%E7%94%9F%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%91%E5%BC%80%E5%8F%91",
+	"libVersion": "2.9.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 1,
+					"name": "音乐列表",
+					"pathName": "pages/music/index",
+					"query": "id=2904709068",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "播放器",
+					"pathName": "pages/player/index",
+					"query": "id=863669066&song=%E6%88%91%E7%9F%A5%E9%81%93%E4%BD%A0%E5%9C%A8%E4%B8%8E%E6%88%91%E7%9B%B8%E9%81%87%E7%9A%84%E8%B7%AF%E4%B8%8A&name=%E7%8E%8B%E8%8D%BB",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发现页",
+					"pathName": "pages/blog/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "编辑blog",
+					"pathName": "pages/publish/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "详情",
+					"pathName": "pages/detail/index",
+					"query": "id=sbroi0qwjvw2xfzm",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/user/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "我的博客",
+					"pathName": "pages/myblog/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "二维码",
+					"pathName": "pages/mycode/index",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

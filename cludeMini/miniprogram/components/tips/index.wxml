@@ -1,0 +1,9 @@
+<view class="wrapper" catchtouchmove='stop'>
+    <view class="content {{isActive ? 'active':''}}">
+        <view class="closebox" bindtap='closeTip'>
+            <i class="iconfont icon-gary"></i>
+        </view>
+        <slot name="first"></slot>
+        <slot name="two"></slot>
+    </view>
+</view>

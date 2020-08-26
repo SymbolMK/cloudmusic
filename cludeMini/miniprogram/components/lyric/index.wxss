@@ -1,0 +1,23 @@
+.lyricwrapper {
+  position: absolute;
+  left: 0;
+  top: 180rpx;
+  right: 0;
+  bottom: 200rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #ffffff;
+}
+
+.lyricwrapper .panel {
+  height: 50%;
+}
+
+.lyricwrapper .lyric {
+  height: 48rpx;
+  line-height: 48rpx;
+}
+
+.lyricwrapper .lyric.active {
+  color: #d43c43;
+}

@@ -1,0 +1,87 @@
+@import '../../app.wxss'
+
+.wrapper
+    position: fixed
+    right: 0
+    left: 0
+    bottom: 0rpx
+    top: 0
+    background: transparent
+    .middle
+        position: absolute
+        right: 0
+        left: 0
+        bottom: 0rpx
+        top: 320rpx
+        background: #ffffff
+        border-top-left-radius: 30rpx
+        border-top-right-radius: 30rpx
+        transform: translateY(100%)
+        transition: all 0.3s
+        overflow: hidden
+        &.show
+            transform: translateY(0)
+        .header
+            height: 100rpx
+            display: flex
+            align-items: center
+            color: #666666
+            border-bottom: 1rpx solid #e3e3e3
+            font-size: 0
+            padding: 0 20rpx
+            box-sizing: border-box
+            .left
+                display: flex
+                align-items: center
+                flex: 1
+                height: 100rpx
+                line-height: 100rpx
+                text-align: left
+                .iconfont
+                    display: inline-block
+                    font-size: 48rpx
+                .tit
+                    font-size: 28rpx
+                    padding-left: 20rpx
+            .right
+                padding: 0 20rpx
+                .iconfont
+                    display: inline-block
+                    font-size: 30rpx
+
+        .scrollview
+            height: calc(100% - 100rpx)
+            .item
+                display: flex
+                align-items: center
+                padding: 20rpx 22rpx
+                box-sizing: border-box
+                .index
+                    width: 60rpx
+                    font-size: 24rpx
+                    color: #999999
+                    padding-left: 10rpx
+                    box-sizing: border-box
+                .content
+                    flex: 1
+                    max-width: 600rpx
+                    .name
+                        font-size: 28rpx
+                        white-space: nowrap
+                        overflow: hidden
+                        text-overflow: ellipsis
+                    .desc
+                        font-size: 24rpx
+                        color: #999999
+                        white-space: nowrap
+                        overflow: hidden
+                        text-overflow: ellipsis
+                .fire-loading
+                    width: 40rpx
+                    height: 40rpx
+                    overflow: hidden
+                    .icon
+                        width: 40rpx
+                &.playing
+                    .index,.content,.desc
+                        color: #ff4134

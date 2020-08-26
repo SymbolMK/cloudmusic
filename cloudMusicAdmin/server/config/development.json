@@ -1,0 +1,14 @@
+{
+  "db": "mongodb://localhost/cloud",
+  "base": "http://127.0.0.1:3006",
+  "mina": {
+    "appid": "wxd97549824f7c029c",
+    "secret": "603eaac806546e964ec4ea512950a1cf",
+    "env": "cloud-xo8ot"
+  },
+  "qiniu": {
+    "AK": "hzjKu9BlzTGsr7KE_fan_lvxXzvKUQHEkHhhfUZD",
+    "SK": "gDDy2FPPZPIgQuF3dcLsbYBKs3tV6Fu8r0WWpDWm",
+    "bucket": "icessr"
+  }
+}

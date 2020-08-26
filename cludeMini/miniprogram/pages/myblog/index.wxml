@@ -1,0 +1,19 @@
+<view class="wrapper">
+    <scroll-view class="scroll" scroll-y scroll-with-animation enable-back-to-top bindscrolltolower="loadMore">
+        <view class="item" wx:for="{{list}}" wx:key='id' wx:if='{{item.status}}'>
+            <shareItem icon-pinglun1='icon-pinglun1' icon-share='icon-share' iconfont='iconfont' item='{{item}}' bindshowComments='showComments' />
+        </view>
+    </scroll-view>
+
+    <!-- 底部授权提示panel -->
+    <tipsModal iconfont='iconfont' icon-gary='icon-gary' wx:if='{{needAuth}}' bindcloseTip='closeTip'>
+        <view class="btnbox" slot='first' wx:if="{{!userInfo.nickName}}">
+            <button class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即授权</button>
+        </view>
+        <view class="comment" slot='two' wx:if="{{addComments}}">
+            <textarea class="textarea" auto-focus="{{true}}" auto-height maxlength="40" bindinput="getVal" value='{{comments}}'></textarea>
+            <button class="btn" bindtap='submitCom'>添加评论</button>
+        </view>
+    </tipsModal>
+</view>
+  

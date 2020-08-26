@@ -1,0 +1,60 @@
+.search {
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  border-bottom: 1rpx solid #c0c4cc;
+  box-sizing: border-box;
+}
+
+.search .publish {
+  padding: 10rpx 20rpx;
+  font-size: 26rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  box-sizing: border-box;
+}
+
+.search .form-control {
+  flex: 1;
+  position: relative;
+  padding-top: 10rpx;
+}
+
+.search .form-control .input {
+  width: 100%;
+  padding-left: 40rpx;
+  font-size: 24rpx;
+  line-height: 40prx;
+  background: #f6eff4;
+  border-radius: 22rpx;
+  box-sizing: border-box;
+}
+
+.search .form-control .input-placeholder {
+  font-size: 20rpx;
+}
+
+.search .form-control .icon {
+  font-size: 24rpx;
+  position: absolute;
+  left: 15rpx;
+  top: 20rpx;
+}
+
+.search .button {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.search .button .btn {
+  background: #d43c43;
+  border: none;
+  border-radius: 8rpx;
+  width: 120rpx;
+  height: 48rpx;
+  padding: 0;
+  margin: 0;
+  line-height: 48rpx;
+  font-size: 24rpx;
+  color: #ffffff;
+}

@@ -1,0 +1,7 @@
+<scroll-view class="lyricwrapper" scroll-y scroll-with-animation scroll-top="{{scrollTop}}px">
+    <view class="panel"></view>
+    <view class="lyric {{currentIndex == index ? 'active':''}}" wx:for='{{lyricList}}' wx:key='{{item}}' id='item{{index}}' bindtap='hideLrc'>
+        {{item.lrc}}
+    </view>
+    <view class="panel" id='item100'></view>
+</scroll-view>

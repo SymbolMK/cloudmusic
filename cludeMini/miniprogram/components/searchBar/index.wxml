@@ -1,0 +1,12 @@
+<view class="search">
+    <view class="publish" bindtap='EditNew'>
+        <i class="iconfont icon-bianji"></i>
+    </view>
+    <view class="form-control">
+        <i class="iconfont icon icon-sousuo"></i>
+        <input class="input" type="text" maxlength="20" value="{{searchVal}}" placeholder-class="input-placeholder" placeholder="请输入搜索标题" bindinput="getVal" />
+    </view>
+    <view class="button">
+        <button class="btn" bindtap='startSearch'>搜索</button>
+    </view>
+</view>

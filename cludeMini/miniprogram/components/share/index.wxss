@@ -1,0 +1,90 @@
+.share {
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #dedede;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+}
+
+.share .info {
+  display: flex;
+  align-items: center;
+}
+
+.share .info .avatar {
+  width: 80rpx;
+  height: 80rpx;
+  background-position: center;
+  background-size: 100%;
+}
+
+.share .info .right {
+  flex: 1;
+  padding-left: 20rpx;
+}
+
+.share .info .right .name {
+  font-size: 30rpx;
+}
+
+.share .info .right .time {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.share .descript {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  text-align: justify;
+}
+
+.share .image_list {
+  position: relative;
+  font-size: 0;
+  margin: 20rpx auto;
+  overflow: hidden;
+}
+
+.share .image_list .image {
+  display: inline-block;
+  width: 220rpx;
+  height: 220rpx;
+  margin-bottom: 14rpx;
+}
+
+.share .image_list .image.middle {
+  margin: 0 14rpx 14rpx;
+}
+
+.share .footer {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30rpx;
+}
+
+.share .footer .comments, .share .footer .share {
+  flex: 1;
+  font-size: 24rpx;
+}
+
+.share .footer .share {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 24rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.share .comment-list {
+  margin-bottom: 20rpx;
+}
+
+.share .comment-list .item {
+  display: flex;
+  font-size: 24rpx;
+}
+
+.share .comment-list .item .tit {
+  flex: 1;
+}

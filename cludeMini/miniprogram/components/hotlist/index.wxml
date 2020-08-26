@@ -1,0 +1,10 @@
+<view class="playwrapper">
+    <wxs module="Utils" src='./index.wxs'/>
+    <view class="playitem" wx:for="{{playList}}" wx:key='_id' bindtap='navigateList' data-id='{{item.id}}'>
+        <view class="play-img">
+            <image class="icon" src="{{item.picUrl}}"/>
+        </view>
+        <view class="hot">{{Utils.formatNum(item.playCount, 2)}}</view>
+        <view class="desc">{{item.name}}</view>
+    </view>
+</view>

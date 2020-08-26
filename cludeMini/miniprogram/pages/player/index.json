@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "playList": "../../components/playlist/index",
+    "Lyric": "../../components/lyric/index"
+  },
+  "disableScroll": true,
+  "navigationBarTitleText": "播放"
+}

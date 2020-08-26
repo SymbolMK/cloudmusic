@@ -1,0 +1,43 @@
+<scroll-view class="wrapper" scroll-y bindscroll="outScroll">
+    <wxs module="Utils" src='./index.wxs'></wxs>
+    <view class="header">
+        <view class="bgflur" style="background-image: url({{info.coverImgUrl}})"></view>
+        <view class="contentbox">
+            <view class="top">
+                <view class="cover" style="background-image: url({{info.coverImgUrl}})">
+                    <view class="count">{{Utils.formatNum(info.playCount || 0)}}</view>
+                </view>
+                <view class="info">
+                    <view class="title">{{info.name}}</view>
+                    <view class="user">
+                        <view class="avatar" style="background-image: url({{info.creator.avatarUrl}})"></view>
+                        <view class="name">{{info.creator.nickname}}</view>
+                    </view>
+                    <view class="desc">{{info.description}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 主题列表 -->
+    <view class="musiclist">
+        <view class="m-header" bindtap='playAll'>
+            <view class="icon"></view>
+            <text class="tit">播放全部</text>
+            <text class="count">（共{{playlist.length}}首）</text>
+        </view>
+        <scroll-view class="scroll" scroll-y='{{canScroll}}'>
+            <view class="item {{isPlayId == item.id?'playing':''}}" wx:for='{{playlist}}' wx:key='id' data-item='{{item}}' bindtap='playThis'>
+                <view class="index">{{index+1}}</view>
+                <view class="content">
+                    <view class="name">{{item.name}}</view>
+                    <view class="desc">
+                        {{item.ar[0].name}} - {{item.al.name}}
+                    </view>
+                </view>
+                <view class="fire-loading" wx:if='{{isPlayId == item.id}}'>
+                    <image class="icon" src='../../images/fire.svg' mode="widthFix"></image>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</scroll-view>

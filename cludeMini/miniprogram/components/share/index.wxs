@@ -1,0 +1,24 @@
+module.exports = {
+    dateFormat: function(fmt, date) {
+        var ret;
+        var date2 = getDate(date)
+        var opt = [
+            ["Y+", date2.getFullYear().toString(),   ],     // 年
+            ["m+", (date2.getMonth() + 1).toString(),],     // 月
+            ["d+", date2.getDate().toString(),       ],     // 日
+            ["H+", date2.getHours().toString(),      ],     // 时
+            ["M+", date2.getMinutes().toString(),    ],     // 分
+            ["S+", date2.getSeconds().toString()     ],     // 秒
+            // 有其他格式化字符需求可以继续添加，必须转化成字符串
+        ];
+        for (var i = 0; i < opt.length; i++) {
+            var k = opt[i][0]
+            var s = opt[i][1]
+            ret = getRegExp("(" + k + ")").exec(fmt);
+            if (ret) {
+                fmt = fmt.replace(ret[1], s > 9 ? s : '0' + s)
+            }
+        }
+        return fmt
+    }
+}

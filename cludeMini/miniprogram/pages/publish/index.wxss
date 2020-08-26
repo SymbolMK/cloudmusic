@@ -1,0 +1,104 @@
+.wrapper .text {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.wrapper .text .area {
+  font-size: 24rpx;
+}
+
+.wrapper .image {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper .image .item {
+  width: 220rpx;
+  height: 220rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+  margin-left: 22rpx;
+  border: 1rpx dashed #c0c4cc;
+  box-sizing: border-box;
+}
+
+.wrapper .image .item .img {
+  font-size: 0;
+  position: relative;
+  height: 218rpx;
+  with: 218rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.wrapper .image .item .img .ico {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.wrapper .image .item .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5  rpx;
+  font-size: 26rpx;
+}
+
+.wrapper .image .item.add {
+  position: relative;
+}
+
+.wrapper .image .item.add .line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #c0c4cc;
+  border-radius: 4rpx;
+}
+
+.wrapper .image .item.add .lat {
+  width: 80rpx;
+  height: 6rpx;
+}
+
+.wrapper .image .item.add .lng {
+  width: 6rpx;
+  height: 80rpx;
+}
+
+.wrapper .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  border-top: 1rpx solid #c0c4cc;
+  box-sizing: border-box;
+}
+
+.wrapper .footer .block {
+  flex: 1;
+}
+
+.wrapper .footer .textlen {
+  font-size: 24rpx;
+  color: #999999;
+  margin-right: 20rpx;
+}
+
+.wrapper .footer .button .btn {
+  background: #d43c43;
+  border: none;
+  border-radius: 8rpx;
+  width: 120rpx;
+  height: 48rpx;
+  padding: 0;
+  margin: 0;
+  line-height: 48rpx;
+  font-size: 24rpx;
+  color: #ffffff;
+}

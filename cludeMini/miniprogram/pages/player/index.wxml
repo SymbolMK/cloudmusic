@@ -1,0 +1,42 @@
+<view class="wrapper">
+    <view class="blur" style="background-image: url('{{currentCover}}')"></view>
+    <view class="content">
+        <view class="header">
+            <view class="name">{{options.song}}</view>
+            <view class="card">{{options.name}}</view>
+        </view>
+        <view class="card-logo {{playState ? 'running':'paused'}}" style="background-image: url('{{currentCover}}');opacity: {{!showLrc ? 1: 0}}" bindtap='toggleLrc'></view>
+    </view>
+    <!-- 播放功能 -->
+    <view class="playMenu">
+        <!-- 播放进度 -->
+        <view class="playRange">
+            <view class="time currentTime">{{currentTime}}</view>
+            <view class="range">
+                <slider class="slider" bindchange="sliderChange" 
+                    min="0" 
+                    max="100" 
+                    value="{{rangeVal}}" 
+                    backgroundColor='rgba(255,255,255,0.2)'
+                    activeColor='rgba(255,255,255,0.6)'
+                    block-size='12'
+                    block-color='#ffffff'
+                />
+            </view>
+            <view class="time longTime">{{duration}}</view>
+        </view>
+
+        <!-- 播放控制 -->
+        <view class="menuList">
+            <view class="item"><view class="iconfont {{playMode=='random'?'icon-suiji': playMode=='loop'?'icon-danquxunhuan':'icon-xunhuan'}}" bindtap='changeMode'></view></view>
+            <view class="item"><view class="iconfont icon-next" bindtap='prev'></view></view>
+            <view class="item"><view class="iconfont {{playState ? 'icon-pause':'icon-play'}}" bindtap='toggleStart'></view></view>
+            <view class="item"><view class="iconfont icon-next" bindtap='next'></view></view>
+            <view class="item"><view class="iconfont icon-list" bindtap='showModal'></view></view>
+        </view>
+    </view>
+    <!-- 播放列表 -->
+    <playList wx:if='{{showModal}}' showModal='{{showModal}}' bind:playMode='playMode' bind:playThis='playThis' bindtap='hideModal' />
+    <!-- 歌词播放列表 -->
+    <Lyric lyric='{{lyric}}' id='lyric' wx:if='{{showLrc}}' bindhideLrc='toggleLrc' />
+</view>

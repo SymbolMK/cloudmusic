@@ -1,0 +1,31 @@
+<view class="wrapper">
+    <!-- 内容 -->
+    <view class="text">
+        <textarea class="area" value="{{value}}" maxlength="100" placeholder="请输入发布信息" auto-focus bindinput="getVal"></textarea>
+    </view>
+
+    <!-- 上传图片 -->
+    <view class="image">
+        <view class="item" wx:for='{{imageList}}' wx:key='index'>
+            <view class="img" data-src='{{item}}' catchtap='previewThis'>
+                <image class="ico" src='{{item}}'></image>
+            </view>
+            <view class="icon" catchtap='deleteThis' data-index='{{index}}'>
+                <i class="iconfont icon-gary"></i>
+            </view>
+        </view>
+        <view class="item add" wx:if='{{imageList && imageList.length < MaxLen}}' catchtap='addnew'>
+            <view class="line lat"></view>
+            <view class="line lng"></view>
+        </view>
+    </view>
+
+    <!-- 发布按钮 -->
+    <view class="footer">
+        <view class="block"></view>
+        <view class="textlen">您还可输入{{140 - value.length}}个字</view>
+        <view class="button">
+            <button class="btn" bindtap='submitData'>发布</button>
+        </view>
+    </view>
+</view>

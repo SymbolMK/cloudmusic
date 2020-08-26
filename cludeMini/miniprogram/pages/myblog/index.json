@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "shareItem": "../../components/share/index"
+  },
+  "navigationBarTitleText": "我的博客",
+  "disableScroll": true
+}

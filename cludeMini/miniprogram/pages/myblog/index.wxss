@@ -1,0 +1,12 @@
+page {
+  height: 100%;
+}
+
+.wrapper, .scroll {
+  height: 100%;
+}
+
+.scroll {
+  padding: 50rpx 0;
+  box-sizing: border-box;
+}

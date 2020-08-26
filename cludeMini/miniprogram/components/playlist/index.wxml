@@ -1,0 +1,27 @@
+<view class="wrapper" bindtap='hideModal'>
+    <view class="middle {{showMiddle ? 'show':''}}" catchtap='stop'>
+        <view class="header">
+            <view class="left" bindtap='changeMode'>
+                <view class="iconfont {{playMode=='random'?'icon-suiji': playMode=='loop'?'icon-danquxunhuan':'icon-xunhuan'}}" bindtap='changeMode'></view>
+                <text class="tit">{{modeTxt[playMode]}}({{playList.length}})</text>
+            </view>
+            <view class="right" bindtap='clearAll'>
+                <view class="iconfont icon-shanchu"></view>
+            </view>
+        </view>
+        <scroll-view class="scrollview" scroll-y>
+            <view class="item {{isPlayId == item.id?'playing':''}}" wx:for='{{playList}}' wx:key='id' data-item='{{item}}' bindtap='playThis'>
+                <view class="index">{{index+1}}</view>
+                <view class="content">
+                    <view class="name">{{item.name}}</view>
+                    <view class="desc">
+                        {{item.ar[0].name}} - {{item.al.name}}
+                    </view>
+                </view>
+                <view class="fire-loading" wx:if='{{isPlayId == item.id}}'>
+                    <image class="icon" src='../../images/fire.svg' mode="widthFix"></image>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

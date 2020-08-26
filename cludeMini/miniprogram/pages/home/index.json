@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "playList": "../../components/hotlist/index"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "主页"
+}
